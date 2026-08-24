@@ -46,8 +46,16 @@ nav li {
 .container {
   white-space: nowrap;
 }
-
+.navLink {
+  transition: color ease 0.5s;
+}
+.navLink:hover {
+  color: black;
+}
 .navLink.active {
+  color: black;
   border-bottom: 2px solid black;
+}
+.logo {
   color: black;
 }
