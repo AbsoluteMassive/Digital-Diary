@@ -4,6 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <div>
+        <a href="index.html" class="logo">Digital Diary</a>
+      </div>
+
+      <div class="new-entries-profile">
+        <a href="vault.html" class="navLink">Archive</a>
+        <a href="new-entry.html" class="navLink active">New Entry</a>
+
+        <a href="vault.html"><i class="fa-solid fa-circle-user"></i></a>
+      </div>
+    </nav>
+    <form>
+      <div>
+        <span>WESNESDAY, MAY 22 2024</span><br />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="untitled reflection"
+        />
+      </div>
+      <div>
+        <span><i class="fa-solid fa-face-smile"></i>Thoughtful</span>
+        <button><i class="fa-solid fa-plus"></i>Add Tag</button>
+      </div>
+      <textarea
+        name="textarea"
+        id="textarea"
+        placeholder="begin your reflection.."
+      ></textarea>
+      <div class="bottom-btn">
+        <div>
+          <button><i class="fa-solid fa-image"></i>Insert Memory</button>
+          <button><i class="fa-solid fa-unlock"></i>Private</button>
+        </div>
+
+        <div>
+          <button>Discard</button>
+          <button class="save-entry">Save Entry</button>
+        </div>
+      </div>
+    </form>
+    <footer>
+      <p>&copy The digital Vellum.Designed for reflection.</p>
+      <div class="footer-links">
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+        <a href="">Archive</a>
+      </div>
+    </footer>
+  </body>
 </html>
