@@ -119,6 +119,12 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
+.entries-container article {
+  width: fit-content;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
 /* form styling */
 .form-grid {
   display: grid;
@@ -131,12 +137,14 @@ input[type="text"] {
   font-size: 50px;
   border: none;
   min-width: 100%;
+  padding: 5px;
 }
 textarea {
   width: 100%;
   min-height: 500px;
   border: none;
-  font-size: 16px;
+  font-size: 24px;
+  padding: 10px;
 }
 .left-instructions {
   justify-content: right;
@@ -166,7 +174,14 @@ textarea {
 .btn-style i {
   margin-right: 5px;
 }
-.save-entry {
+.save {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+.save-entry-1 {
   font-size: 16px;
   border-radius: 5px;
   padding: 10px;
@@ -178,6 +193,7 @@ textarea {
   border-radius: 5px;
   padding: 2px;
   margin-right: 5px;
+  width: fit-content;
 }
 .tags-container {
   margin: 10px 0;
@@ -198,4 +214,16 @@ textarea {
   text-decoration: none;
   color: black;
   border-bottom: solid;
+}
+.border-left {
+  border-left: solid black;
+  padding-left: 10px;
+}
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: rgb(209, 206, 206);
+}
+input[type="text"]:focus,
+textarea:focus {
+  outline: 1px solid black;
 }
