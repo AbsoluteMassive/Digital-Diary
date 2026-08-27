@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+button,
+a {
+  cursor: pointer;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f1f5f9;
@@ -95,13 +99,10 @@ footer {
   color: grey;
   display: flex;
   justify-content: space-between;
-  justify-items: center;
+  align-items: center;
   padding: 0.5rem;
 }
 
-.footer-links {
-  align-self: center;
-}
 .footer-links a {
   text-decoration: none;
   color: grey;
@@ -115,4 +116,84 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+/* form styling */
+.form-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 8px;
+  padding: 10px;
+  margin: 5px;
+}
+input[type="text"] {
+  font-size: 50px;
+  border: none;
+  min-width: 100%;
+}
+textarea {
+  width: 100%;
+  min-height: 500px;
+  border: none;
+  font-size: 16px;
+}
+.left-instructions {
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  color: grey;
+  width: auto;
+  margin-right: 5px;
+}
+.form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: transparent;
+}
+.btn-style {
+  border: none;
+  font-size: 16px;
+}
+.btn-style:hover {
+  background-color: white;
+}
+.red-hover:hover {
+  color: red;
+}
+.btn-style i {
+  margin-right: 5px;
+}
+.save-entry {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+.form-tags {
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 5px;
+}
+.tags-container {
+  margin: 10px 0;
+}
+/* vault html css */
+.call-to-action {
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+.call-to-action h2 {
+  font-size: 24px;
+}
+.call-to-action p {
+  color: grey;
+}
+.call-to-action a {
+  text-decoration: none;
+  color: black;
+  border-bottom: solid;
 }

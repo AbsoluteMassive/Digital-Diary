@@ -24,26 +24,28 @@
       </div>
     </nav>
     <div class="form-grid">
-      <div>
+      <div class="left-instructions">
         <p>
           DEPHT INSIGHT<br />
-          write without judgment.<br />
-          The vellum remembers only what <br /><strong>you</strong> choose to
-          include.
+          Write without judgment.<br />
+          The diary remembers only <br />
+          what <strong>you</strong> choose to include.
         </p>
       </div>
       <form>
         <div>
-          <span>WESNESDAY, MAY 22 2024</span><br />
+          <span>WEDNESDAY, MAY 22 2024 (placeholder)</span><br />
           <input
             type="text"
             id="title"
             name="title"
-            placeholder="untitled reflection"
+            placeholder="Untitled Reflection"
           />
         </div>
-        <div>
-          <span><i class="fa-solid fa-face-smile"></i>Thoughtful</span>
+        <div class="tags-container">
+          <span class="form-tags"
+            ><i class="fa-solid fa-face-smile"></i>Thoughtful</span
+          >
           <button><i class="fa-solid fa-plus"></i>Add Tag</button>
         </div>
         <textarea
@@ -51,14 +53,18 @@
           id="textarea"
           placeholder="begin your reflection.."
         ></textarea>
-        <div class="bottom-btn">
+        <div class="form-btn">
           <div>
-            <button><i class="fa-solid fa-image"></i>Insert Memory</button>
-            <button><i class="fa-solid fa-unlock"></i>Private</button>
+            <button class="btn-style">
+              <i class="fa-solid fa-image"></i>Insert Memory
+            </button>
+            <button class="btn-style">
+              <i class="fa-solid fa-unlock"></i>Private
+            </button>
           </div>
 
           <div>
-            <button>Discard</button>
+            <button class="btn-style red-hover">Discard</button>
             <button type="submit" class="save-entry">Save Entry</button>
           </div>
         </div>
