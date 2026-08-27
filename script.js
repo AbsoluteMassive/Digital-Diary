@@ -3,11 +3,19 @@ const titleInput = document.getElementById("title");
 const textAreaInput = document.getElementById("textarea");
 const saveBtn = document.querySelector(".save");
 
-//function to output to console
-function consoleOutput() {
-  const title = titleInput.value.trim();
-  const textArea = textAreaInput.value.trim();
-  console.log(`The title is: ${title} and the content is: ${textArea}`);
-}
 // event added to the button
 saveBtn.addEventListener("click", consoleOutput);
+//array
+const articles = [];
+// object to store the info
+
+//function to push the object into the array usingg a button
+function pushObject() {
+  const formData = {
+    title: titleInput.value.trim(),
+    textarea: textAreaInput.value.trim(),
+  };
+  articles.push(formData);
+}
+// event added to the button
+saveBtn.addEventListener("click", pushObject);
