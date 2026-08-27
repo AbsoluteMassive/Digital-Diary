@@ -83,6 +83,15 @@ article {
   background-color: white;
   border-radius: 10px;
 }
+.entries-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
 
 .entries-first-container {
   display: grid;
@@ -113,19 +122,7 @@ footer {
 .fa-unlock {
   transform: scaleX(-1);
 }
-/* vault css */
-.entries-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.entries-container article {
-  width: fit-content;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-}
-/* form styling */
+
 .form-grid {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
@@ -168,9 +165,7 @@ textarea {
 .btn-style:hover {
   background-color: white;
 }
-.red-hover:hover {
-  color: red;
-}
+
 .btn-style i {
   margin-right: 5px;
 }
