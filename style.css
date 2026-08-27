@@ -21,6 +21,7 @@ nav {
   padding: 0.5rem;
   z-index: 9999;
   background-color: white;
+  min-height: 70px;
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -40,6 +41,7 @@ nav ul {
 nav li {
   margin: 8px;
 }
+/*
 .btn {
   display: inline-block;
   color: aliceblue;
@@ -48,7 +50,7 @@ nav li {
   width: auto;
   padding: 0.125rem;
 }
-
+*/
 .fa-circle-user {
   font-size: 20px;
   margin-right: 8px;
