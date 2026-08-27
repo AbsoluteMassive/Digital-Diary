@@ -28,7 +28,7 @@ if (saveBtn) {
 
 const homeContainer = document.querySelector(".entriesM");
 function recentEntries() {
-  const recentArticles = articles.slice(0, 5);
+  const recentArticles = articles.slice(-5).reverse();
   let div;
   // for loop to loo through the array
   for (let i = 0; i < recentArticles.length; i++) {
@@ -61,9 +61,10 @@ if (homeContainer) {
 // displaying the entries to the vault
 const vaultContainer = document.querySelector(".entries-container");
 function allArticles() {
-  for (let i = 0; i < articles.length; i++) {
-    const title = articles[i].title;
-    const paragraph = articles[i].textarea;
+  const allArticles = articles.reverse();
+  for (let i = 0; i < allArticles.length; i++) {
+    const title = allArticles[i].title;
+    const paragraph = allArticles[i].textarea;
     const article = document.createElement("article");
     const h2 = document.createElement("h2");
     h2.textContent = title;
