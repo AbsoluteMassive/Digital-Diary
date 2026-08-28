@@ -16,13 +16,30 @@
         <a href="index.html" class="logo">Digital Diary</a>
       </div>
 
-      <div class="new-entries-profile">
-        <a href="vault.html" class="navLink">Archive</a>
-        <a href="new-entry.html" class="navLink active">New Entry</a>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
 
+      <div class="main-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="new-entry.html" class="navLink active">Editor</a></li>
+          <li><a href="vault.html">All Entries</a></li>
+        </ul>
+      </div>
+      <div class="new-entries-profile">
+        <a href="new-entry.html"
+          ><button class="save-entry-1">New Entry</button></a
+        >
         <a href="vault.html"><i class="fa-solid fa-circle-user"></i></a>
       </div>
     </nav>
+    <div class="all-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new-entry.html">Editor</a></li>
+        <li><a href="vault.html">Entries</a></li>
+      </ul>
+      <button id="clear-btn">Clear All Entries</button>
+    </div>
     <div class="form-grid">
       <div class="left-instructions">
         <p>
@@ -32,9 +49,8 @@
           what <strong>you</strong> choose to include.
         </p>
       </div>
-      <form>
+      <form id="form">
         <div class="border-left">
-          <span>WEDNESDAY, MAY 22 2024 (placeholder)</span><br />
           <input
             type="text"
             id="title"
@@ -43,12 +59,7 @@
             required
           />
         </div>
-        <div class="tags-container">
-          <span class="form-tags"
-            ><i class="fa-solid fa-face-smile"></i>Thoughtful</span
-          >
-          <button><i class="fa-solid fa-plus"></i>Add Tag</button>
-        </div>
+
         <textarea
           name="textarea"
           id="textarea"
@@ -57,15 +68,17 @@
         ></textarea>
         <div class="form-btn">
           <div>
-            <button class="btn-style">
+            <button type="button" class="btn-style">
               <i class="fa-solid fa-image"></i>Insert Memory
             </button>
-            <button class="btn-style">
+            <button type="button" class="btn-style">
               <i class="fa-solid fa-unlock"></i>Private
             </button>
           </div>
           <div>
-            <button class="btn-style">Discard</button>
+            <button type="button" id="discard" class="btn-style">
+              Discard
+            </button>
             <button type="submit" class="save">Save Entry</button>
           </div>
         </div>

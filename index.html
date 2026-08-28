@@ -15,11 +15,14 @@
       <div>
         <a href="index.html" class="logo">Digital Diary</a>
       </div>
-      <div>
+
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+
+      <div class="main-links">
         <ul>
           <li><a href="index.html" class="navLink active">Home</a></li>
-          <li><a href="new-entry.html" class="navLink">Editor</a></li>
-          <li><a href="vault.html" class="navLink">All Entries</a></li>
+          <li><a href="new-entry.html">Editor</a></li>
+          <li><a href="vault.html">All Entries</a></li>
         </ul>
       </div>
       <div class="new-entries-profile">
@@ -29,13 +32,22 @@
         <a href="vault.html"><i class="fa-solid fa-circle-user"></i></a>
       </div>
     </nav>
+
+    <div class="all-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new-entry.html">Editor</a></li>
+        <li><a href="vault.html">Entries</a></li>
+      </ul>
+      <button id="clear-btn">Clear All Entries</button>
+    </div>
+
     <main>
       <header>
         <h1>Daily Reflections</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque
-          odio, pretium eu imperdiet et, rutrum ut nunc. Donec sed purus id arcu
-          aliquet tincidunt.
+          Some days are worth remembering, and some thoughts just need to be
+          written down. This is <strong>your</strong> space to do both.
         </p>
       </header>
 

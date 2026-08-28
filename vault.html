@@ -15,6 +15,16 @@
       <div>
         <a href="index.html" class="logo">Digital Diary</a>
       </div>
+
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+
+      <div class="main-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="new-entry.html">Editor</a></li>
+          <li><a href="vault.html" class="navLink active">All Entries</a></li>
+        </ul>
+      </div>
       <div class="new-entries-profile">
         <a href="new-entry.html"
           ><button class="save-entry-1">New Entry</button></a
@@ -22,13 +32,20 @@
         <a href="vault.html"><i class="fa-solid fa-circle-user"></i></a>
       </div>
     </nav>
+    <div class="all-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new-entry.html">Editor</a></li>
+        <li><a href="vault.html">Entries</a></li>
+      </ul>
+      <button id="clear-btn">Clear All Entries</button>
+    </div>
     <main>
       <header>
-        <h1>My Vault</h1>
+        <h1>Your Vault</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque
-          odio, pretium eu imperdiet et, rutrum ut nunc. Donec sed purus id arcu
-          aliquet tincidunt.
+          All your thoughts and memories, right here. Take a look back whenever
+          you feel like it.
         </p>
       </header>
       <div class="entries-container"></div>

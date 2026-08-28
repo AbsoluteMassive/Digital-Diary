@@ -78,3 +78,34 @@ function allArticles() {
 if (vaultContainer) {
   allArticles();
 }
+
+// toggle button for small screen to display an additional div under the nav
+const toggleBtn = document.querySelector(".nav-toggle");
+const allContainer = document.querySelector(".all-container");
+const icon = document.querySelector(".fa-bars");
+function toggleFunction() {
+  allContainer.classList.toggle("toggle");
+  //icon toggle
+  if (icon.classList.contains("fa-bars")) {
+    icon.classList.replace("fa-bars", "fa-x");
+  } else {
+    icon.classList.replace("fa-x", "fa-bars");
+  }
+}
+
+toggleBtn.addEventListener("click", toggleFunction);
+
+// clear entries function attached to a button
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", () => {
+  localStorage.removeItem("entries");
+  location.reload();
+});
+// form clear
+const discard = document.getElementById("discard");
+const form = document.getElementById("form");
+if (discard) {
+  discard.addEventListener("click", () => {
+    form.reset();
+  });
+}
