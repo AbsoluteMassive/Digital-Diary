@@ -298,6 +298,10 @@ textarea:focus {
   color: whitesmoke;
   border-bottom: 2px solid whitesmoke;
 }
+.dark-mode .fa-bars,
+.dark-mode .fa-x {
+  color: whitesmoke;
+}
 
 /* making the page more responsive witth media query and toggle button */
 
