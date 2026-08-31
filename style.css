@@ -8,10 +8,11 @@ a {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f1f5f9;
-  overflow-y: auto;
+  overflow: auto;
 }
 /* styling the nav */
 nav {
+  margin-top: 0;
   min-width: 180px;
   width: 100%;
   position: sticky;
@@ -75,6 +76,7 @@ article {
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+  overflow: auto;
 }
 .entries-container {
   display: flex;
@@ -156,22 +158,31 @@ textarea {
   margin-top: 10px;
   background-color: transparent;
 }
-#discard {
-  color: red;
-  margin: 8px;
-}
+
 .btn-style {
-  border: none;
+  border: 3px solid red;
   font-size: 16px;
-  margin: 8px;
+
+  color: red;
 }
-.btn-style i {
-  margin-right: 5px;
+#dark-mode {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: black;
+}
+#dark-mode2 {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: black;
 }
 .save {
   font-size: 16px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 8px;
   color: white;
   background-color: black;
 }
@@ -222,15 +233,79 @@ textarea::placeholder {
 }
 input[type="text"]:focus,
 textarea:focus {
-  outline: 1px solid black;
+  outline: 3px solid black;
 }
+
+/* dark mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f2f3;
+}
+.dark-mode .logo {
+  color: whitesmoke;
+}
+.dark-mode nav {
+  background-color: #121212;
+}
+.dark-mode nav a {
+  color: whitesmoke;
+}
+.dark-mode header {
+  background-color: transparent;
+  border-color: whitesmoke;
+}
+.dark-mode .entries-first-container {
+  background-color: transparent;
+}
+.dark-mode .entries-container {
+  background-color: transparent;
+}
+.dark-mode .border-left {
+  border-color: whitesmoke;
+}
+.dark-mode input[type="text"] {
+  background-color: #121212;
+  color: whitesmoke;
+}
+.dark-mode textarea {
+  background-color: #121212;
+  color: whitesmoke;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode textarea:focus {
+  outline: 2px solid whitesmoke;
+}
+.dark-mode .call-to-action a {
+  color: whitesmoke;
+}
+.dark-mode .all-container {
+  background-color: transparent;
+}
+.dark-mode .all-container a {
+  color: whitesmoke;
+}
+.dark-mode article {
+  color: whitesmoke;
+  background-color: #121212;
+  border-color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+.dark-mode .fa-circle-user {
+  color: whitesmoke;
+}
+.dark-mode .navLink.active {
+  color: whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+}
+
 /* making the page more responsive witth media query and toggle button */
 
 .nav-toggle {
   display: none;
   border: none;
   font-size: 24px;
-  background-color: white;
+  background-color: transparent;
 }
 .all-container {
   display: none;
@@ -241,11 +316,21 @@ textarea:focus {
 }
 .all-container button {
   color: red;
-  border: 2px solid transparent;
+
   margin: 6px auto;
   font-size: 16px;
 }
+#clear-btn {
+  color: red;
+  border: 3px solid red;
+  font-size: 16px;
+}
 
+#clear-btn2 {
+  color: red;
+  border: 3px solid red;
+  font-size: 16px;
+}
 .all-container a {
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -293,5 +378,11 @@ textarea:focus {
   }
   footer {
     flex-direction: column;
+  }
+  .form-btn {
+    flex-direction: column;
+  }
+  .form-btn button {
+    margin: 2px;
   }
 }

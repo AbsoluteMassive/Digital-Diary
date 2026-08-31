@@ -3,7 +3,7 @@ const titleInput = document.getElementById("title");
 const textAreaInput = document.getElementById("textarea");
 const saveBtn = document.querySelector(".save");
 
-//"let" to allow reaassignment for array
+//"let" to allow reassignment for the array
 let articles = [];
 //including previous entries in the array
 const entries = localStorage.getItem("entries");
@@ -18,7 +18,7 @@ function pushObject() {
     textarea: textAreaInput.value.trim(),
   };
   articles.push(formData); // push to array
-  localStorage.setItem(`entries`, JSON.stringify(articles)); // saving it to local storagge usingg JSON
+  localStorage.setItem(`entries`, JSON.stringify(articles)); // saving it to local storagge using JSON
 }
 // checking if the page contains the save button
 if (saveBtn) {
@@ -95,12 +95,29 @@ function toggleFunction() {
 
 toggleBtn.addEventListener("click", toggleFunction);
 
-// clear entries function attached to a button
+// clear entries function attached to buttons
+function clearEntries() {
+  const confirmPopUp = confirm("Are you sure?");
+  if (confirmPopUp) {
+    localStorage.removeItem("entries");
+    location.reload();
+  }
+}
 const clearBtn = document.getElementById("clear-btn");
-clearBtn.addEventListener("click", () => {
-  localStorage.removeItem("entries");
-  location.reload();
-});
+const clearBtn2 = document.getElementById("clear-btn2");
+if (clearBtn) {
+  clearBtn.addEventListener("click", clearEntries);
+}
+if (clearBtn2) {
+  clearBtn2.addEventListener("click", clearEntries);
+}
+/*clearBtn.addEventListener("click", () => {
+  const confirmPopUp = confirm("Are you sure?");
+  if (confirmPopUp) {
+    localStorage.removeItem("entries");
+    location.reload();
+  }
+}); */
 // form clear
 const discard = document.getElementById("discard");
 const form = document.getElementById("form");
@@ -108,4 +125,46 @@ if (discard) {
   discard.addEventListener("click", () => {
     form.reset();
   });
+}
+//toggle for dark mode
+const btn = document.getElementById("dark-mode");
+const btn2 = document.getElementById("dark-mode2");
+// if dark mode was saved, retrieves "true" and adds dark mode and changes the button textcontent
+if (localStorage.getItem("themeChoice") === "true") {
+  document.body.classList.add("dark-mode");
+  if (btn) {
+    btn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+  }
+  if (btn2) {
+    btn2.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+  }
+}
+
+function changeTheme() {
+  document.body.classList.toggle("dark-mode");
+  const isDark = document.body.classList.contains("dark-mode");
+  localStorage.setItem("themeChoice", isDark);
+
+  if (isDark) {
+    if (btn) {
+      btn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+    }
+    if (btn2) {
+      btn2.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+    }
+  } else {
+    if (btn) {
+      btn.innerHTML = '<i class="fa-regular fa-moon"></i> Dark Mode';
+    }
+    if (btn2) {
+      btn2.innerHTML = '<i class="fa-regular fa-moon"></i> Dark Mode';
+    }
+  }
+}
+
+if (btn) {
+  btn.addEventListener("click", changeTheme);
+}
+if (btn2) {
+  btn2.addEventListener("click", changeTheme);
 }
