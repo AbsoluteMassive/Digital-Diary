@@ -10,6 +10,9 @@ body {
   background-color: #f1f5f9;
   overflow: auto;
 }
+main {
+  min-height: 100vh;
+}
 /* styling the nav */
 nav {
   margin-top: 0;
