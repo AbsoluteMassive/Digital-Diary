@@ -17,8 +17,13 @@ function pushObject() {
     title: titleInput.value.trim(),
     textarea: textAreaInput.value.trim(),
   };
-  articles.push(formData); // push to array
-  localStorage.setItem(`entries`, JSON.stringify(articles)); // saving it to local storagge using JSON
+  if (formData.title === "" || formData.textarea === "") {
+    // condition to prevent white text to be saved
+    return;
+  } else {
+    articles.push(formData); // push to array
+    localStorage.setItem(`entries`, JSON.stringify(articles)); // saving it to local storagge using JSON
+  }
 }
 // checking if the page contains the save button
 if (saveBtn) {
