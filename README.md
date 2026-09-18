@@ -1,6 +1,7 @@
 # Digital-Diary
 
 A digital diary web application.
+[Live Demo](https://absolutemassive.github.io/Digital-Diary/)
 
 ## Screenshots
 
