@@ -354,7 +354,7 @@ textarea:focus {
   margin: 8px 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .nav-toggle {
     display: block;
   }
