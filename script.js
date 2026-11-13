@@ -132,7 +132,7 @@ if (discard) {
   });
 }
 //toggle for dark mode
-const btn = document.getElementById("dark-mode");
+const btn = document.querySelector("button#dark-mode");
 const btn2 = document.getElementById("dark-mode2");
 // if dark mode was saved, retrieves "true" and adds dark mode and changes the button textcontent
 if (localStorage.getItem("themeChoice") === "true") {
